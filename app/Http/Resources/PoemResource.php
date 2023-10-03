@@ -16,6 +16,7 @@ class PoemResource extends JsonResource
     {
         return [
             'id' => $this->id,
+            'name' => $this->name,
             'stanzas' => StanzaResource::collection($this->stanzas()->orderBy('number')->get())
         ];
     }
