@@ -53,4 +53,11 @@ class PoemController extends Controller
         return new PoemResource($poem);
     }
 
+    public function find(int $id)
+    {
+        $poem = Poem::findOrFail($id);
+
+        return new PoemResource($poem);
+    }
+
 }
